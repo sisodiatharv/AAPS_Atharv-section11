@@ -2,11 +2,14 @@ import java.util.Scanner;
 
 public class palindrome_string {
     public static boolean ispalindrome(String c){
-        int l=c.length();
-        for (int i=0;i<l;i++){
-            if(c.charAt(i)!=c.charAt(l-i-1)){
+        int j=c.length();
+        int i=0;
+       while(i<j){
+            if(c.charAt(i)!=c.charAt(j-1)){
                 return false;
             }
+            j--;
+            i++;
         }
         return true;
     }
